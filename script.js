@@ -25,7 +25,10 @@ function createGrid(size){
         div.style.width = `${sizeInPercent}%`;
         div.style.height = `${sizeInPercent}%`;
         div.addEventListener("mouseover", () => {
-            div.style.backgroundColor = "black";
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            div.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
         });
         container.appendChild(div);
     }
